@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", "Noto Sans KR", sans-serif;
+  background-color: #fff;
+  color: #111;
+  font-size: 1rem; /* 💡 전체 폰트 크기 ↑ */
+  line-height: 1.7;
+}
+/* 기본 라이트모드 스타일 유지 */
+
+/* 🌙 다크모드 */
+.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark .header {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+.dark .card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark .main-text p,
+.dark .card p {
+  color: #ccc;
+}
+
+.toggle-dark-btn {
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+  border: 1px solid #999;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dark .toggle-dark-btn {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+.dark .header {
+  background-color: #1f1f1f;
+  border-color: #333;
+  color: white; /* ✅ makes all text inside .header white */
+}
+
+.dark .header h1,
+.dark .header button,
+.dark .header .categories button {
+  color: white;
+}
+.dark .categories .active {
+  border-bottom: 2px solid white;
+}
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #3965ec;
+  border-bottom: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+h1.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.categories {
+  margin-bottom: 2rem;
+}
+
+.categories button {
+  background: none;
+  border: none;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.categories .active {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.main-article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.main-article img {
+  flex: 1 1 50%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.main-text {
+  flex: 1 1 45%;
+  font-size: 1rem;
+}
+
+.main-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.load-more-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #333;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.filters select {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-article {
+    flex-direction: column;
+  }
+
+  .main-article img {
+    height: auto;
+  }
+}

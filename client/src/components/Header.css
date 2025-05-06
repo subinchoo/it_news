@@ -1,0 +1,16 @@
+.header {
+  background-color: #5047f3;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #111;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}

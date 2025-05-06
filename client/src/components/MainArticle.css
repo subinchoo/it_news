@@ -1,0 +1,48 @@
+.main-article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.main-article img {
+  flex: 1 1 50%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  max-height: 360px;
+}
+
+.main-text {
+  flex: 1 1 45%;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.dark .main-text {
+  background-color: transparent;
+}
+
+/* dark mode fix */
+.dark .main-text h2,
+.dark .main-text p,
+.dark .main-text a {
+  color: #fff;
+}
+.dark .main-article img {
+  filter: brightness(0.8);
+}
